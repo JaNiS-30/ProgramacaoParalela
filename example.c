@@ -3,8 +3,8 @@
 #include <pthread.h>
 #include <time.h>
 
-#define NUM_THREADS 16 // Defina o número de threads desejado
-#define NUM_ELEMENTS 128 // Defina o número de elementos no vetor de entrada
+#define NUM_THREADS 1 // Defina o número de threads desejado
+#define NUM_ELEMENTS 4 // Defina o número de elementos no vetor de entrada
 
 void *threadFunc(void *arg) {
     int *num = (int *)arg;
@@ -14,7 +14,7 @@ void *threadFunc(void *arg) {
 }
 
 int main() {
-    int input[NUM_ELEMENTS] = {10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3, 10, 5, 8, 2, 7, 9, 15, 12, 3, 6, 11, 4, 1, 10, 7, 3}; // Vetor de números de entrada
+    int input[NUM_ELEMENTS] = {10, 5, 8, 2};
     pthread_t threads[NUM_THREADS];
     int i;
 
